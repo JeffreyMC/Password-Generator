@@ -7,9 +7,20 @@ import random
 
 
 root = Tk()
-root.geometry("200x100")
 root.resizable(False, False)
 root.title("Generador de Contraseñas")
+
+# Obtener el ancho y alto de la ventana
+anchoVentana = root.winfo_reqwidth()
+altoVentana = root.winfo_reqheight()
+
+# obtiene la mitad de las dimensiones de la pantalla y la ventana
+posicionDerecha = int(root.winfo_screenwidth()/2 - anchoVentana/2)
+posicionAbajo = int(root.winfo_screenheight()/2 - altoVentana/2)
+
+# Posiciona la ventana en el centro de la pantalla
+root.geometry("+{}+{}".format(posicionDerecha, posicionAbajo))
+
 frame = Frame(root)
 frame.pack()
 
