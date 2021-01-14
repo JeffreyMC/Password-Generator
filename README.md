@@ -2,11 +2,11 @@
 
 Password generator made with Python.
 
-Used module: random
+Used modules: random, tkinter
 
 ___________________________
 
 Generador de contraselas hecho con Python.
 
-Módulo utilizado: random
+Módulo utilizado: random, tkinter
 
