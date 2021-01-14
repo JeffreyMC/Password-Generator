@@ -24,22 +24,22 @@ def generaPassword():
 
     longitud = 16
     password = ''.join(random.sample(todo, longitud))
-    E1.delete(0, END)
-    E1.insert(0, (password))
+    entrada.delete(0, END)
+    entrada.insert(0, (password))
 
 
 def copiarPass():
-    if E1.get() == "":
+    if entrada.get() == "":
         messagebox.showinfo("Info", "Debes generar la contraseña primero")
     else:
         root.clipboard_clear()
-        root.clipboard_append(E1.get())
+        root.clipboard_append(entrada.get())
         messagebox.showinfo("Info", "¡¡Contraseña copiada!!")
         root.update()  # SE QUEDA EN EL PORTAPAPELES HASTA QUE SE CIERRE LA APLICACIÓN
 
 
-E1 = Entry(root, bd=5)
-E1.pack(side=TOP)
+entrada = Entry(root, bd=5)
+entrada.pack(side=TOP)
 boton = Button(root, text="Generar Password", command=generaPassword)
 boton.pack(side=BOTTOM)
 btnCopiar = Button(root, text="Copiar contraseña", command=copiarPass)
