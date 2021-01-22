@@ -6,7 +6,7 @@ Used modules: random, tkinter
 
 ___________________________
 
-Generador de contraselas hecho con Python.
+Generador de contraseñas hecho con Python.
 
 Módulo utilizado: random, tkinter
 
